@@ -1,0 +1,30 @@
+<main>
+  <article>
+    <h1>Editar produto</h1>
+    <form>
+      <div>
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" [(ngModel)]="name" />
+      </div>
+      <div>
+        <label for="price">Preço</label>
+        <input type="text" id="price" name="price" [(ngModel)]="price" />
+      </div>
+      <div>
+        <label for="description">Descrição</label>
+        <textarea id="description" name="description" [(ngModel)]="description"></textarea>
+      </div>
+      <div>
+        <label for="quantity">quantidade</label>
+        <input type="number" id="quantity" [(ngModel)]="quantity" [ngModelOptions]="{standalone: true}" placeholder="quantidade" />
+      </div>
+      <div>
+        <button (click)="update()">Salvar</button>
+      </div>
+    </form>
+  </article>
+
+  <div class="back-button-container">
+    <button (click)="back()" class="back-button">Voltar para a Página Inicial</button>
+  </div>
+</main>

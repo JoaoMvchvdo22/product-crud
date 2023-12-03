@@ -1,0 +1,26 @@
+<main class="home_container">
+  <article *ngIf="!showOptions" class="welcome_container">
+    <h1>Bem-vindo à Página Inicial</h1>
+    <p>A plataforma proporciona uma experiência intuitiva para gerenciar seus produtos. Com o CRUD integrado, você pode facilmente Criar, Ler, Atualizar e Deletar (CRUD) informações sobre os seus produtos.</p>
+    <button class="start_button" (click)="letsStart()">Vamos começar</button>
+  </article>
+
+  <article *ngIf="showOptions" class="home_content">
+    <header>
+      <h1>Gerenciador de produtos</h1>
+      <nav>
+        <div (click)="toPath('create')">
+          <p>Cadastrar</p>
+        </div>
+        <div (click)="toPath('list')">
+          <p>Listar</p>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <p>Selecione uma das opções a cima</p>
+    </section>
+
+  </article>
+</main>
